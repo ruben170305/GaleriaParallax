@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Simpson";
+    src: url(font/Simpsonfont.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Simpson";
+}
+body {
+    background-image: url(img/ciudad.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+h1{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 80px;
+    color: #FED90F;
+}
+.container_cards{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    /* CARACTERISTICAS CSS */
+    display: flex;
+    /* ACORDEON: SE ADAPTA AL TAMAÑO DE LA PANTALLA */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    width: 300px;
+    margin: 10px;
+    transition: all ease 300ms;
+}
+.card:hover{
+    width: 350px;
+}
+
+.card .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .cover img{
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));    
+    transition: all ease 400ms;
+}
+
+.card:hover .cover img{
+    top: 0;
+    filter: none;
+}
+
+.card .img_back{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all ease 400ms;
+}
+
+/* Pseudoclase :nth-of-type() en css, selecciona uno o más elementos de un tipo dado,
+puede ser p, img, videos, etc... en función de su posición y los situa entre un grupo de hermanos */
+.card:nth-of-type(1) .img_back{
+    background-image: url(img/casa.jpg);
+}
+.card:nth-of-type(2) .img_back{
+    background-image: url(img/casa.jpg);
+}
+.card:nth-of-type(3) .img_back{
+    background-image: url(img/casa.jpg);
+}
+.card:nth-of-type(4) .img_back{
+    background-image: url(img/casa.jpg);
+}
+.card:nth-of-type(5) .img_back{
+    background-image: url(img/casa.jpg);
+}
+
+.card:hover .img_back{
+    bottom: -40px;
+}
+
+.card .descripcion{
+    background: whitesmoke;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all ease 300ms;
+}
+.card:hover .descripcion{
+    padding: 40px;
+}
+.card .descripcion .h2{
+    margin-top: 10px;
+
+}
+.card .descripcion .p{
+    margin-top: 10px;
+    text-align: justify;
+}
+.card .descripcion input{
+    padding: 10px 40px;
+    margin-top:20px;
+    display: block;
+    margin: 20px auto 0 auto;
+    border: none;
+    background: #FED90F;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all ease 300ms;
+}
+.card .descripcion input:hover{
+    background: #FE3618;
+    color: white;
+}
+.card .descripcion a{
+    text-decoration: none;
+}
